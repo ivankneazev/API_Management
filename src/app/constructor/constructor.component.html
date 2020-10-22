@@ -1,0 +1,24 @@
+<p>constructor works!</p>
+<div class="builderCont">
+    <form-builder [form]="form" (change)="onChange($event)"></form-builder>
+</div>
+
+
+
+<div class="well jsonviewer">
+    <pre id="json"><code class="language-json" #json></code></pre>
+</div>
+
+<form class="testForm">
+    <formio [form]="formSrc" (change)="renderOnChange($event)" (submit)="onSubmit($event)"></formio>
+</form>
+<div class="conResult">
+    <textarea class="schema" col = 100>{{jsonResult}}</textarea>
+    <textarea class="schema" col = 100>{{datarResult}}</textarea>
+</div>
+
+
+<button (click)='sendSchema()'>Отобразить схему</button>
+<button (click)='viewinBuilder()'>Загрузить в конструктор</button>
+<button (click)='saveToJson()'>Отобразить JSON</button>
+<button (click)='reset()'>Сбросить поля</button>

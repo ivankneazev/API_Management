@@ -1,0 +1,30 @@
+<div class="loginBackground">
+    <form class="k-form" [formGroup]="form">
+        <div class="loginRow d-flex flex-column justify-content-center ">
+            <fieldset class="k-form-fieldset">
+                <div class="d-flex justify-content-center">
+                    <kendo-textbox-container floatingLabel="Email" class="col-xs-12 col-sm-12 col-md-8">
+                        <kendo-formfield>
+                            <input kendoTextBox type="email" formControlName="email" required />
+                            <kendo-formerror>Error: Username is required</kendo-formerror>
+                        </kendo-formfield>
+                    </kendo-textbox-container>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                    <kendo-textbox-container floatingLabel="Password" class="col-xs-12 col-sm-12 col-md-8">
+                        <kendo-formfield>
+                            <input kendoTextBox type="password" formControlName="password" #password required />
+                            <kendo-formerror>Error: Password is required</kendo-formerror>
+                        </kendo-formfield>
+                    </kendo-textbox-container>
+                </div>
+                <div>
+                    <a href="/restore" class="restore float-right">Restore password</a>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                    <button class="submit-btn btn btn-primary" (click)="submit()"> Login </button>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+</div>
